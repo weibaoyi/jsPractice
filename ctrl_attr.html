@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #mark{
+            width: 100px;height: 100px;background: #000;margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+<div style="margin: 20px auto;width: 800px;height: auto">
+    <button id="btn1">变宽</button>
+    <button id="btn2">变高</button>
+    <button id="btn3">变色</button>
+    <button id="btn4">隐藏</button>
+    <button id="btn5">重置</button>
+    <div id="mark"></div>
+</div>
+<script>
+    var btn1=document.getElementById("btn1");
+    var btn2=document.getElementById("btn2");
+    var btn3=document.getElementById("btn3");
+    var btn4=document.getElementById("btn4");
+    var btn5=document.getElementById("btn5");
+    var mark=document.getElementById("mark");
+    btn1.onclick=function(){
+        mark.style.width="200px";
+    }
+    btn2.onclick=function(){
+        mark.style.height="200px";
+    }
+    btn3.onclick=function(){
+        mark.style.background="red";
+    }
+    btn4.onclick=function(){
+        mark.style.display="none";
+    }
+    btn5.onclick=function(){
+        mark.style.display="none";
+    }
+
+
+    /*var changeStyle = function (elem, attr, value){
+        elem.style[attr] = value
+    };
+
+    window.onload = function (){
+        var oBtn = document.getElementsByTagName("input");
+        var oDiv = document.getElementById("div1");
+        var oAtt = ["width","height","background","display","display"];
+        var oVal = ["200px","200px","red","none","block"];
+        for (var i = 0; i < oBtn.length; i++){
+            oBtn[i].index = i;
+            oBtn[i].onclick = function (){
+                this.index == oBtn.length - 1 && (oDiv.style.cssText = "");
+                changeStyle(oDiv, oAtt[this.index], oVal[this.index])
+            }
+        }
+    };*/
+
+
+</script>
+</body>
+</html>
