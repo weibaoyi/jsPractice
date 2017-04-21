@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #box{
+            width: 500px;
+            height: 500px;
+            margin: 20px auto;
+        }
+        .changBox{
+            width: 200px;
+            height: 200px;
+            background: #000000;
+            color: #ffffff;
+            text-align: left;
+            line-height:30px;
+            text-indent: 2em;
+            margin-top: 10px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <label>属性名：<input type="text" value="background"></label><br><br>
+        <label>属性值：<input type="text" value="blue"></label><br><br>
+        <label>
+            <button id="sure">确定</button>
+            <button id="iReset">重置</button>
+        </label>
+        <div class="changBox">在上方输入框输入"属性名"及"属性值"，点击确定按钮查看效果。</div>
+    </div>
+    <script>
+        function　setAttr(ele,attr,val){
+            ele.style[attr]=val;
+        }
+        var sure=document.getElementById("sure");
+        var iReset=document.getElementById("iReset");
+        var changBox=document.getElementsByClassName("changBox")[0];
+        var inps=document.getElementsByTagName("input");
+        sure.onclick=function(){
+            setAttr(changBox,inps[0].value,inps[1].value);
+        }
+        iReset.onclick=function(){
+            changBox.removeAttribute("style");
+        }
+
+    </script>
+</body>
+</html>

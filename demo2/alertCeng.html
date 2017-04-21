@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0;
+        }
+        html,body{
+            height: 100%;
+            width: 100%;
+        }
+        body{
+            position: relative;
+        }
+        #box{
+            width: 140px;
+            height: 50px;
+            margin: 0px auto;
+        }
+        .alertDiv{
+            width: 412px;
+            height: 212px;
+            border: 3px solid orangered;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+            background: #ffffff;
+            display: none;
+        }
+        .alertDiv>h3{
+            height: 35px;
+            border-bottom: 3px solid orangered;
+            background: orange;
+        }
+        .alertDiv>h3>span{
+            float: right;
+            width: 20px;
+            height: 20px;
+            text-align: center;
+            line-height: 20px;
+            background: lightslategrey;
+            color: #ffffff;
+            margin-top: 7px;
+            border: 1px solid #666;
+            margin-right: 3px;
+            cursor: pointer;
+        }
+        .mark{
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            height: 100%;
+            width: 100%;
+            background: #000000;
+            opacity: 0.6;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <button id="btn">
+            弹出层
+        </button>
+    </div>
+    <div class="mark"></div>
+    <div class="alertDiv">
+        <h3><span class="close">X</span></h3>
+    </div>
+    <script>
+        var btn=document.getElementById("btn");
+        var alertDiv=document.getElementsByClassName("alertDiv")[0];
+        var mark=document.getElementsByClassName("mark")[0];
+        var close=document.getElementsByClassName("close")[0];
+        btn.onclick=function(){
+            alertDiv.style.display="block";
+            mark.style.display='block';
+        }
+        close.onclick=function(){
+            alertDiv.style.display="none";
+            mark.style.display='none';
+        }
+    </script>
+</body>
+</html>

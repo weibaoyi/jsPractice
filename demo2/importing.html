@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #ime{margin-top:5px;background:#fff;border:1px solid #9a99ff;display:none;}
+        #ime li{width:100%;line-height:24px;display:inline-block;vertical-align:top;}
+        #close{border-top:1px solid #9a99ff;}
+        #ime li a{color:#00c;padding:0 5px;display:block;text-decoration:none;}
+        #ime li a:hover{background:#d9e1f6;}
+        #box{
+            width: 400px;
+            height: auto;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <button id="btn">输入法</button>
+        <ul id="ime">
+            <li><a href="javascript:;">手写</a></li>
+            <li><a href="javascript:;">拼音</a></li>
+            <li id="close"><a href="javascript:;">关闭</a></li>
+        </ul>
+    </div>
+    <script>
+        var btn=document.getElementById("btn");
+        var ime=document.getElementById("ime");
+        var close=document.getElementById("close");
+        btn.onclick=function(){
+            ime.style.display=ime.style.display=="block"?"none":"block";
+        }
+        close.onclick=function(){
+            ime.style.display="none";
+        }
+    </script>
+</body>
+</html>
