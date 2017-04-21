@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            float: left;
+            margin-left: 10px;
+            background: #000000;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <br>
+    <p><button id="btn">点击让div变成红色</button></p>
+    <script>
+        var divs=document.getElementsByTagName("div");
+        var btn=document.getElementById("btn");
+        btn.onclick=function(){
+            for(var i=0;i<divs.length;i++){
+                divs[i].style.background='red';
+            }
+        }
+    </script>
+</body>
+</html>

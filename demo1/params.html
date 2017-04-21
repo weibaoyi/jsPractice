@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" value="北京市">
+    <input type="text" value="朝阳区">
+    <button id="btn">传参</button>
+    <script>
+        var inps=document.getElementsByTagName("input");
+        var btn=document.getElementById("btn");
+        btn.onclick=function(){
+            alertParams(inps[0],inps[1])
+        }
+        function alertParams(a,b){
+            alert(a.value);
+            alert(b.value);
+        }
+    </script>
+</body>
+</html>

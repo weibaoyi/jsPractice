@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #box{
+            line-height: 200px;
+            text-align: center;
+        }
+       .box{
+            width: 200px;
+            height: 200px;
+            margin: 20px auto;
+            background: lightcoral;
+            cursor: crosshair;
+            color: #ffffff;
+        }
+        .bg{
+            width: 200px;
+            height: 200px;
+            margin: 20px auto;
+            background: lightseagreen;
+            cursor: crosshair;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <div class="box" id="box">
+        this is box
+    </div>
+    <script>
+        var box=document.getElementById("box");
+        box.onmouseover=function(){
+            box.className="bg"
+        }
+        box.onmouseout=function(){
+            box.className="box"
+        }
+    </script>
+</body>
+</html>

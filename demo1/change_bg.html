@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/red.css">
+    <style>
+       p>span.current{
+           background: #ffffff !important;
+       }
+        p>span{
+            display: inline-block;
+            margin-left: 10px;
+            border-width: 5px;
+            border-style: solid;
+            width: 10px;
+            height: 10px;
+            cursor: pointer;
+        }
+        #red{
+            border-color: red;
+            background: red;
+        }
+       #black{
+           border-color: black;
+           background: black;
+       }
+       #green{
+           border-color: green;
+           background: green;
+       }
+
+
+        ul>li{
+            height: 30px;
+            text-align: center;
+            float: left;
+            line-height: 30px;
+            list-style: none;
+            width: 100px;
+            border: 1px solid #ffffff;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        <span id="red" class="current"></span>
+        <span id="black"></span>
+        <span id="green"></span>
+    </p>
+    <ul>
+        <li>新闻</li>
+        <li>新闻</li>
+        <li>新闻</li>
+        <li>新闻</li>
+        <li>新闻</li>
+        <li>新闻</li>
+    </ul>
+    <script>
+        var links=document.getElementsByTagName("link")[0];
+        console.log(links);
+        var ospan=document.getElementsByTagName("span");
+        var oli=document.getElementsByTagName("li");
+        for(var i=0;i<ospan.length;i++){
+            ospan[i].onclick=function(){
+                for(var n in ospan) ospan[n].className="";
+                this.className="current";
+                links['href']="css/"+this.id+".css"
+            }
+        }
+    </script>
+</body>
+</html>
