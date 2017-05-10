@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body,div,h2,ul,li{margin:0;padding:0;}
+        body{font:12px/1.5 Tahoma;}
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .box{
+            width: 572px;
+            height: 276px;
+            border: 1px solid #000000;
+            margin: 20px auto;
+            padding-left: 10px;
+        }
+        .box h2{
+            text-align: center;
+            line-height: 30px;
+            margin-top: 10px;
+        }
+        .box ul li{
+            width: 102px;
+            height: 102px;
+            border: 1px solid #000000;
+            float: left;
+            margin:10px 10px 0 0;
+            line-height: 20px;
+            position: relative;
+            background: #cccccc;
+            cursor: crosshair;
+        }
+        .box ul p{
+            text-align: center;
+            width: 100%;
+            padding-top: 30px;
+        }
+        .box ul span{
+            display: none;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            width: auto;
+            height: auto;
+        }
+        img{
+            width: 102px;
+            height: 102px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h2>名车车标展示-鼠标移过显示车标</h2>
+        <ul>
+            <li>
+                <p>
+                    宝马
+                    <br>
+                    BMW
+                </p>
+                <span>
+                    <img src="img/1.jpg">
+                </span>
+            </li>
+            <li>
+                <p>
+                    Alfa Romeo
+                    <br>
+                    阿尔法-罗米欧
+                </p>
+                <span>
+                    <img src="img/2.jpg">
+                </span>
+            </li>
+            <li>
+                <p>
+                    Volkswagen
+                    <br>
+                    大众汽车
+                </p>
+                <span>
+                    <img src="img/3.jpg">
+                </span>
+            </li>
+            <li>
+                <p>
+                    Saab
+                    <br>
+                    萨布牌轿车
+                </p>
+                <span>
+                    <img src="img/4.jpg">
+                </span>
+            </li>
+            <li>
+                <p>
+                    Lamborghini
+                    <br>
+                    兰博基尼
+                </p>
+                <span>
+                    <img src="img/5.jpg">
+                </span>
+            </li>
+            <li>
+                <p>
+                    Porsche
+                    <br>
+                    保时捷
+                </p>
+                <span>
+                    <img src="img/6.jpg">
+                </span>
+            </li>
+            <li>
+                <p>
+                    Peugeot
+                    <br>
+                    标致
+                </p>
+                <span>
+                    <img src="img/7.jpg">
+                </span>
+            </li>
+            <li>
+                <p>
+                    Mercedes1
+                    <br>
+                    梅赛德斯 奔驰
+                </p>
+                <span>
+                    <img src="img/8.jpg">
+                </span>
+            </li>
+            <li>
+                <p>
+                    Buick
+                    <br>
+                    别克汽车
+                </p>
+                <span>
+                    <img src="img/9.jpg">
+                </span>
+            </li>
+            <li>
+                <p>
+                    宝马
+                    <br>
+                    BMW
+                </p>
+                <span>
+                    <img src="img/10.jpg">
+                </span>
+            </li>
+        </ul>
+    </div>
+    <script>
+        var lis=document.getElementsByTagName("li");
+        for(var i=0;i<lis.length;i++){
+            lis[i].onmouseover=function(){
+                this.childNodes[3].style.display="block";
+            }
+            lis[i].onmouseout=function(){
+                this.childNodes[3].style.display="none";
+            }
+        }
+    </script>
+</body>
+</html>
